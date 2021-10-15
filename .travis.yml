@@ -6,4 +6,4 @@ services:
   - docker build -t naufalnadeem/docker-react -f Dockerfile.dev . #image tagged to naufalnadeem/reponame
 
   script:
-   -docker run naufalnadeem/docker-react npm run test -- --coverage
+  - docker run naufalnadeem/docker-react npm run test -- --coverage
