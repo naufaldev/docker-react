@@ -1,9 +1,17 @@
-sudo: require
-services:
- -docker
+#sudo: require
+#services:
+# - docker
 
- before_install:
-  - docker build -t naufalnadeem/docker-react -f Dockerfile.dev . #image tagged to naufalnadeem/reponame
+# before_install:
+#  - docker build -t naufalnadeem/docker-react -f Dockerfile.dev . #image tagged to naufalnadeem/reponame
 
-  script:
-  - docker run naufalnadeem/docker-react npm run test -- --coverage
+ language: node_js
+
+ node_js:
+   - "14.17.3"
+
+install:
+  - npm install
+
+script:
+  - docker build -t naufalnadeem/docker-react -f Dockerfile.dev . 
