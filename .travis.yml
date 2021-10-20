@@ -17,7 +17,7 @@ script:
   bucket_path: "docker"
   on:
    branch: master
-  ACCESS_KEY_ID: $AWS_ACCESS_KEY
+  access_key_id: $AWS_ACCESS_KEY
   secreat_access_key:
    secure: "$AWS_SECREAT_KEY"
    
